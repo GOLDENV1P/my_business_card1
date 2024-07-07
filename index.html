@@ -1,1 +1,123 @@
 
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Визитка</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Хедер -->
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <!-- Замените src на URL вашего логотипа -->
+                <img src="h_344.jpg" alt="Логотип">
+            </div>
+            <nav class="navigation">
+                <ul>
+                    <li><a href="#about">О нас</a></li>
+                    <li><a href="#services">Услуги</a></li>
+                    <li><a href="#contact">Контакты</a></li>
+                </ul>
+            </nav>
+            <div class="contact-info">
+                <!-- Укажите контактные данные владельца визитки -->
+                <p>Телефон: +7 (123) 456-78-90</p>
+                <p>Email: example@mail.com</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Секция героя -->
+    <section class="hero">
+        <div class="container">
+            <h1>Добро пожаловать на наш сайт!</h1>
+            <p>Мы предлагаем лучшие услуги в своей области.</p>
+            <a href="#contact" class="btn">Связаться с нами</a>
+        </div>
+    </section>
+
+    <!-- Секция о нас -->
+    <section id="about" class="about fade-in-section">
+        <div class="container">
+            <h2>О нас</h2>
+            <p>Мы - команда профессионалов с многолетним опытом работы в индустрии. Наша цель - предоставить вам лучшие решения и услуги, которые помогут вашему бизнесу расти и процветать.</p>
+        </div>
+    </section>
+
+    <!-- Секция услуг -->
+    <section id="services" class="services fade-in-section">
+        <div class="container">
+            <h2>Наши услуги</h2>
+            <div class="services-list">
+                <!-- Услуга 1 -->
+                <div class="service-item">
+                    <h3>Услуга 1</h3>
+                    <p>Описание услуги 1. Мы предоставляем высококачественные услуги, которые удовлетворят все ваши потребности.</p>
+                </div>
+                <!-- Услуга 2 -->
+                <div class="service-item">
+                    <h3>Услуга 2</h3>
+                    <p>Описание услуги 2. Наша команда готова предложить вам лучшие решения в короткие сроки.</p>
+                </div>
+                <!-- Услуга 3 -->
+                <div class="service-item">
+                    <h3>Услуга 3</h3>
+                    <p>Описание услуги 3. Мы гарантируем качество и надежность наших услуг.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Секция контактов -->
+    <section id="contact" class="contact fade-in-section">
+        <div class="container">
+            <h2>Контакты</h2>
+            <p>Для получения дополнительной информации и заказа услуг, пожалуйста, свяжитесь с нами по указанным ниже контактам.</p>
+            <p>Телефон: +7 (123) 456-78-90</p>
+            <p>Email: example@mail.com</p>
+            <p class="sus4 modal-trigger" >Написать нам</p>
+        </div>
+    </section>
+
+    <!-- Модальное окно -->
+    <div class="contact-modal ">
+        <div class="modal-content  sus44">
+            <span class="close">&times;</span>
+            <p>Здесь будет форма для связи. В настоящее время эта функция отключена.</p>
+        </div>
+    </div>
+
+    <!-- Футер -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Ваша Компания. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Добавляем функциональность для открытия и закрытия модального окна без использования внешнего файла script.js
+        document.addEventListener('DOMContentLoaded', () => {
+            const modal = document.querySelector('.contact-modal');
+            const trigger = document.querySelector('.modal-trigger');
+            const closeButton = document.querySelector('.contact-modal .close');
+
+            trigger.addEventListener('click', () => {
+                modal.style.display = 'block';
+            });
+
+            closeButton.addEventListener('click', () => {
+                modal.style.display = 'none';
+            });
+
+            window.addEventListener('click', (event) => {
+                if (event.target == modal) {
+                    modal.style.display = 'none';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
